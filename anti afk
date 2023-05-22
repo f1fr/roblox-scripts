@@ -1,0 +1,9 @@
+local VU = game:GetService("VirtualUser")
+ 
+game:GetService("Players").LocalPlayer.Idled:connect(function()
+    VU:CaptureController()
+    VU:ClickButton2(Vector2.new())
+    print("Skipped")
+end)
+ 
+print("Anti Afk Enabled.")
